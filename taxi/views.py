@@ -1,7 +1,3 @@
-from lib2to3.fixes.fix_input import context
-
-
-from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import generic
 
@@ -24,14 +20,17 @@ class ManufacturerListView(generic.ListView):
     queryset = Manufacturer.objects.all().order_by("name")
     paginate_by = 5
 
+
 class CarListView(generic.ListView):
     model = Car
     queryset = Car.objects.select_related("manufacturer")
     paginate_by = 5
 
+
 class DriverListView(generic.ListView):
     model = Driver
     paginate_by = 5
+
 
 class CarDetailView(generic.DetailView):
     model = Car
