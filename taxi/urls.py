@@ -5,7 +5,8 @@ from .views import (index,
                     CarListView,
                     DriverListView,
                     CarDetailView,
-                    DriverDetailView)
+                    DriverDetailView
+                    )
 
 urlpatterns = [
     path("", index, name="index"),
