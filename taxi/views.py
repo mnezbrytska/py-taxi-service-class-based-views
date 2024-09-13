@@ -25,11 +25,12 @@ class CarListView(generic.ListView):
     model = Car
     queryset = Car.objects.select_related("manufacturer")
     paginate_by = 5
-
+    ordering = ["id"]
 
 class DriverListView(generic.ListView):
     model = Driver
     paginate_by = 5
+    ordering = ["id"]
 
 
 class CarDetailView(generic.DetailView):
