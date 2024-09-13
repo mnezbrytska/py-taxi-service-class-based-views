@@ -27,6 +27,7 @@ class CarListView(generic.ListView):
     paginate_by = 5
     ordering = ["id"]
 
+
 class DriverListView(generic.ListView):
     model = Driver
     paginate_by = 5
